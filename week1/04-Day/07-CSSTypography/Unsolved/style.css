@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 1550px;
+    height: 700px;
+}
+
+h1{
+    text-align:center;
+    margin: 10px auto 10px auto;
+    padding: 90px 0 90px 0;
+    border: 20px 10px;
+    font-family: 'Roboto';
+    width: 500px;
+    /* height: 200px; */
+    font-size: 50px;
+}
+
+h3{
+    text-align: center;
+    margin: 10px;
+    padding: 10px 10px;
+    border: 20px 10px;
+    background-color: aqua;
+}
+
+
+
+p{ 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.enlarge-24{
+    font-size: 24px;
+}
+
+.increase-50px{
+    line-height: 50px;
+
+}

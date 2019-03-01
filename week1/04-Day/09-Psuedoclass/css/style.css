@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* default */
+a{
+    color: yellow;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* link1 */
+.link1:hover{
+    background-color: blue;
+    font-size: 50px;
+    font: bold;
+    font-family: 'Roboto';
+}
+
+
+/* focus */
+.link1:focus{
+    
+}
+
+
+
+
+
+/* link2 */
+.link2:hover{
+    background-color:orange;
+    font: bold;
+    font-size: 50px;
+}

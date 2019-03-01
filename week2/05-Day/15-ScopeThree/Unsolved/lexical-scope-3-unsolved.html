@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lexical Scope</title>
+</head>
+<body>
+
+  <h2>Let's Talk About Scope!</h2>
+
+  <script type="text/javascript">
+
+    // Example One: Global Scope
+    // -------------------------------------------
+    var a = 1;
+    function one() {
+      alert("One: " + a);
+    }
+
+    // What will get alerted? one +1 
+    one();
+
+    // Example Two: Local Scope
+    // -------------------------------------------
+    function twotop() {  //
+
+      function two(a) {
+        alert("Two: " + a);
+      }
+
+      two(a);
+    }
+
+    // What will get alerted? two:1
+    twotop();
+
+    // Example Three: Local Scope
+    // -------------------------------------------
+    var a = 5;  
+    function three() {
+
+      var a = 3;  // this is a local declaration an not a reassign . if 
+      alert("Three: " + a);
+    }
+
+    // What will get alerted?  three: 3
+    three();
+
+    // Example Four: Local Scope
+    // -------------------------------------------
+    function first() {
+      var a = 5;
+
+      function second() {
+        var a = 3;
+
+        function third() {
+          alert("Four: " + a);
+        }
+
+        third(); // calls the fn
+      }
+
+      second();
+
+      alert("Five: " + a);  // five:5  will be alerted because third and second fn are closed so the var a = 5 is call as the glabal one in this block of code.
+    }
+
+    // What will get alerted?
+    first();  // four: 3
+  
+  </script>
+</body>
+</html>

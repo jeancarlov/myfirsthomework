@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+  <div class="container"></div>
+    <p id="userchoice-text">user choice " r,p,s</p>
+    <p id="computerchoice-text"> </p>
+    <p id="wins"><span>wins</span></p>
+    <p id="loses"><span>loses</span></p>
+    <p id="ties"><span>ties</span></p>
+  </div>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+      // Determines which key was pressed.
+      var userGuess = event.key;  // this is our user game
+
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];  // this is the computer guess 
+
+      // this logic deternies the outcome of the game (win/loss/tie), and increments the appropiate
+
+      if ((userGuess === "r"  && computerGuess === "s"))
+
+      // Alerts the key the user pressed (userGuess).
+      alert("User guess: " + userGuess);
+
+      // Alerts the Computer's guess.
+      alert("Computer guess: " + computerGuess);
+
+
+      
+
+    };
+
+    
+  </script>
+
+</body>
+
+</html>

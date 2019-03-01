@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scope</title>
+</head>
+<body>
+
+  <h2>Check console to see the madness!</h2>
+
+  <script>
+    var outerFunction = function() {  //global fn
+
+      var x = 5;  // glabal var if is compare to the nested fn
+
+      var nestedFunction = function() {// local(nested) fn
+
+        var y = 7; 
+
+        // What will this print? // 5
+        console.log("X: " + x);
+
+        // What will this print? // 7
+        console.log("Y: " + y);
+
+        var z = 10;
+        // What will this print?  // 10 
+        console.log("Z (inside): " + z);
+      };
+
+      return nestedFunction;
+    };
+
+    var myFunction = outerFunction();
+    myFunction();
+
+    // What will this print?  / undefined since Z because is totally outside the declare funtions 
+    console.log("Z (outside): " + z;
+
+</script>
+
+</body>
+</html>

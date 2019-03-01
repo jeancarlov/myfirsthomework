@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure</title>
+</head>
+<body>
+  <h2>Check console to see the madness!</h2>
+
+  <script>
+    var cat = {
+      name: "Gus",
+      color: "gray",
+      age: 15,
+
+      printInfo: function() { // printInfo is a method of the cat obj.
+        console.log("inside printInfo()");
+
+        // What will this print?   this will print the obj cat and its items
+        console.log(this);  
+
+        // What will this print?   gus, gray, 15,
+        console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);
+
+        var nestedFunction = function() {  // this is not a method from the cat obj therefore it causes an error in the system when we call the this. tool inside this fn
+            // instead of declaring a var. make the nestedFuntion a method so that it could match with the obj.
+          console.log("inside nestedFunction()");
+
+          // What will this print? this will print the window because its part of a variable that goes back to the global obj.
+          console.log(this);  
+
+          // What will this print? 
+          console.log("Name:", this.name, "Color:", this.color, "Age:", this.age);
+        };
+
+        nestedFunction();
+      }
+    };
+
+    // calls the printInfo function. Which subsequently calls the nestedFunction()
+    cat.printInfo();
+
+</script>
+
+</body>
+</html>
